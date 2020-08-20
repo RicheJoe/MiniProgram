@@ -1,4 +1,4 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
-<button size="mini">点我</button>
+<text class="title">hello 我是首页</text>
+
 
