@@ -1,6 +1,4 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello 我是首页</text>
 
-<view wx:for="{{movies}}" wx:key="index">{{index}}-{{item.title}}</view>
-
 

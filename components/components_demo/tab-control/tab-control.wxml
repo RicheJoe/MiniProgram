@@ -1,0 +1,11 @@
+<!--components/tab-control/tab-control.wxml-->
+<view class="tab-control">
+  <view  
+  class='tabitem {{currentIndex == index ? "active" : "" }}'
+  wx:for="{{title}}" wx:key="item"
+  bindtap="indexClick" data-index="{{index}}">
+  <text>{{item}}</text>
+  </view>
+</view>
+
+<view>当前计数{{counter}}</view>

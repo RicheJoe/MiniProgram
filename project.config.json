@@ -74,8 +74,9 @@
 				},
 				{
 					"id": -1,
-					"name": "笔记测试",
-					"pathName": "pages/test/test",
+					"name": "测试demo",
+					"pathName": "pages/test_demo/test",
+					"query": "",
 					"scene": null
 				}
 			]

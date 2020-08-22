@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog",
-    "mp-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar"
-   
-  }
-  
-  
-}

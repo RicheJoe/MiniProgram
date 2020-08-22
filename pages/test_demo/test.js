@@ -9,7 +9,9 @@ Page({
     inputShowed: false,
     inputVal: "",
     isActive:false,
-    nowTime:new Date().toLocaleTimeString()
+    nowTime:new Date().toLocaleTimeString(),
+    movies:[],
+    counter:0
   },
 
 
@@ -73,6 +75,15 @@ Page({
         nowTime:new Date().toLocaleTimeString()
       })
     }, 1000);
+    wx.request({
+      url: 'http://t.yushu.im/v2/movie/in_theaters',
+      success:(res)=>{
+        const data = res.data.subjects;
+        this.setData({
+          movies:data
+        })
+      }
+    })
 
   },
 
@@ -123,5 +134,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  increment(event){
+    this.setData({
+      counter:this.data.counter+event.detail.add
+    })
+  },
+  itemClick(e){
+    console.log(e);
+    
+  },
+  clickinner(){
+    const tabcontrol = this.selectComponent('#control')
+    tabcontrol.setData({
+      counter: tabcontrol.data.counter + 20
+    })
   }
 })

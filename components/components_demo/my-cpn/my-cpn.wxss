@@ -1,0 +1,5 @@
+/* components/my-cpn/my-cpn.wxss */
+.cpn1{
+  background-color: yellowgreen;
+}
+

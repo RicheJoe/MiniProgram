@@ -185,3 +185,30 @@
         <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
     </view>
 </view>
+
+
+
+
+<view wx:for="{{movies}}" wx:key="index">{{index}}-{{item.title}}
+</view>
+
+
+
+
+
+<!-- 组件测试 -->
+<my-cpn  title="hahaha1"/>
+<my-cpn  title="heiheihei2"/>
+<my-cpn  title="自定义样式" titleclass="red"/>
+
+<view>当前计数：{{counter}}</view>
+<btn bind:increment="increment"/>
+<tab-control title="{{['流行','新款','精选']}}"
+          bind:itemClick="itemClick"
+          id="control"
+ />
+<button size="mini" bind:tap="clickinner">修改组件内数据</button>
+
+<my-slot>
+<button>插槽+按钮</button>
+</my-slot>
