@@ -1,0 +1,70 @@
+/* pages/test/test.wxss */
+
+/* 导入css路径 */
+/* @import '/xxx.wxss' */
+
+.pressed{
+  background-color: red;
+}
+.box{
+  background-color: red;
+}
+.box2{
+  background-color: black;
+}
+.hoverbox2{
+  background-color: blue;
+}
+.box1{
+  width: 100px;
+  height: 100px;
+  background-color: sandybrown;
+  margin: auto;
+}
+
+.hoverbox1{
+  background-color: seagreen;
+  font-size: 30px;
+}
+
+
+input{
+  border: 1px solid #000;
+  margin: 10px 30px;
+}
+
+.container1{
+  background-color: blue;
+  white-space: nowrap;
+}
+
+.item1{
+  width: 100px;
+  height: 100px;
+  background-color: burlywood;
+  margin: 10px;
+  display: inline-block;
+
+}
+
+.container2{
+  margin: 20px 0px;
+  background-color: skyblue;
+  height: 300px;
+}
+
+.item2{
+  width: 100px;
+  height: 100px;
+  background-color: burlywood;
+  margin: 10px;
+ 
+
+}
+
+.mycolor{
+  color: red;
+}
+.mycolor2{
+  color: green;
+}

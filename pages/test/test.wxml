@@ -1,0 +1,187 @@
+<!--pages/test/test.wxml-->
+<text>pages/test/test.wxml</text>
+<!-- ----------------------text的基本使用 ----------------->
+<!-- 行内元素 类似span  不会换行 -->
+<text>我是测试页面</text>
+<text>我是测试页面哈哈哈\n</text>
+<!-- 使用\n换行 -->
+<text>我是测试页面\n</text>
+<text>我是测试页面哈哈哈\n</text>
+
+<!-- 常见属性 -->
+<!-- 默认情况下文本长按不能选中  可以增加selectable -->
+<text user-select="{{true}}">\n可选中的我是测试页面哈哈哈\n</text>  
+<text user-select>可选中的我是测试页面哈哈哈\n</text> 
+
+<!-- space空格值的设置  默认nbsp emsp一个中文字符 ensp半个中文字符-->
+<text>hello world\n</text>
+<text space="nbsp">hello world\n</text>
+<text space="emsp">hello world\n</text>
+<text space="ensp">hello world\n</text>
+
+<!-- decode 解码文本 -->
+<text decode>5 &gt; 3</text>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------- button的属性 ---------------->
+<button>按钮</button>
+<view class="mycolor {{isActive ? 'mycolor2' : ''}}">hahahz换</view>
+<view>{{nowTime}}</view>
+<map></map>
+<button size="mini" bindtap="changeColor">切换颜色</button>
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+<!-- 镂空效果 -->
+<button size="mini" plain>按钮</button>
+<button size="mini" disabled>按钮</button>
+<!-- 加载 -->
+<button size="mini" loading="{{true}}">按钮</button>
+<!-- hover class 点击的class -->
+<button size="mini" hover-class="pressed">按钮</button>
+
+
+
+
+
+
+
+
+
+
+<!-- -----------------------------------view标签的使用-------- -->
+<!-- 类似div  块级元素 通常用做容器 -->
+<view class="box">哈哈哈哈</view>
+<view>哈哈哈哈222</view>
+<!-- hover class 按下的class  hover-stay-time 手指松开后点击态保留时间 -->
+<!-- hover-stop-propagation指定是否阻止本节点的祖先节点出现点击态 -->
+<view class="box2" hover-class="hoverbox2">
+  <view class="box1"  
+        hover-class="hoverbox1"                       
+        hover-stay-time="0"
+        hover-stop-propagation>
+                      box1
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        -------------------------------image -->
+<!-- 有默认宽高 行内块元素 -->
+<image src="/assets/tabbar/购物车满.png"></image>
+<!-- 自带api 选择手机相册的图片或者拍照 -->
+<button bindtap="choosePic">选择照片</button>
+<image src="{{imgpath}}"></image>
+
+<!-- lazy-load 进入上下三个屏幕大小后加载 -->
+
+<view>-------------------lazy-load------------</view>
+<image wx:for="{{10}}"  wx:key="item"
+       src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+       bindload="imgload" 
+       lazy-load
+       show-menu-by-longpress
+/>
+<!-- show-menu-by-longpress开启长按图片显示识别小程序码菜单 -->
+
+
+
+
+
+
+
+
+
+
+<!-- ------------------------------------------- input   -->
+<input value="111"/>
+<input type="idcard"/>
+<input password/>
+<input placeholder="xixixixi" confirm-type="go"/>
+
+<!-- 绑定事件 -->
+<input bindinput="handleinput"
+       bindfocus="handlefocus"
+       bindconfirm="handleconfirm" ></input>
+
+  
+
+
+
+
+
+
+
+<!-- --------------------------------------scroll view -->
+<!-- scrol-x 水平滚动 -->
+<scroll-view class="container1" scroll-x>
+  <view wx:for="{{10}}" wx:key="index" class="item1">{{item}}</view>
+</scroll-view>
+
+<!-- scrol-y  垂直滚动 -->
+<scroll-view class="container2" scroll-y bindscroll="handlescroll">
+  <view wx:for="{{10}}" wx:key="index" class="item2">{{item}}</view>
+</scroll-view>
+
+<!-- 监听滚动  bindscroll -->
+
+
+
+
+
+
+
+
+<!-- wxss中的尺寸适配     rpx -->
+<!-- 简单理解  1rpx=0.5px  当在iPhone6屏幕上时候-->
+<!-- rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。 -->
+
+
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">SearchBar</view>
+        <view class="page__desc">搜索栏</view>
+    </view>
+    <view class="page__bd">
+        <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+    </view>
+</view>

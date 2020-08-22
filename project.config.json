@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"enhance": false,
 		"postcss": true,
@@ -27,11 +27,11 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.12.1",
 	"appid": "wxfd9c81ba6d6d8041",
 	"projectname": "MiniProgram",
 	"debugOptions": {
@@ -69,6 +69,13 @@
 					"id": -1,
 					"name": "分类",
 					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "笔记测试",
+					"pathName": "pages/test/test",
 					"scene": null
 				}
 			]

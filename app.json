@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/test/test",
     "pages/home/home",
     "pages/about/about",
     "pages/category/category"
@@ -27,6 +28,11 @@
         "selectedIconPath": "assets/tabbar/分类1.png"
       }
     ],
-    "selectedColor":"#ff5777"
+    "selectedColor": "#ff5777"
+  },
+  "sitemapLocation": "sitemap98.json",
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
   }
 }
