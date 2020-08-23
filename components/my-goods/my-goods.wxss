@@ -1,0 +1,19 @@
+/* components/my-goods/my-goods.wxss */
+.goods{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  padding-top:32rpx ;
+  
+  
+}
+
+
+.goods > .item{
+  width: 48%;
+  margin: 4rpx 8rpx;
+  position: relative;
+  
+}

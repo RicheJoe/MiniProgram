@@ -1,5 +1,28 @@
 <!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<!-- ---------页面跳转  通过navigator -->
+
+<navigator url="/pages/about/about"
+>跳到about</navigator>
+
+<navigator url="/pages/category/category" open-type="switchTab"
+>跳到分类</navigator>
+
+
+<navigator url="/pages/about/about?name=tom&age=18"
+>跳到about</navigator>
+
+
+<!-- 代码跳转 -->
+<button size="mini" bindtap="changRoute">跳转</button>
+
+
+
+
+
+
+
+
+
 <!-- ----------------------text的基本使用 ----------------->
 <!-- 行内元素 类似span  不会换行 -->
 <text>我是测试页面</text>
@@ -212,3 +235,7 @@
 <my-slot>
 <button>插槽+按钮</button>
 </my-slot>
+
+
+
+

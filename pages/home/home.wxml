@@ -1,4 +1,24 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello 我是首页</text>
+<my-swiper list="{{banners}}"/>
+
+<my-recommend list="{{recommends}}" bind:imageload="imageload"/>
+
+<my-popular/>
+
+<!-- <tab-control title="{{titles}}" 
+bind:tabClick="handleTabClick"
+class="fixed"
+wx:if="{{istabFixed}}"
+id="tab-control1"
+/> -->
+
+<tab-control title="{{titles}}" 
+bind:tabClick="handleTabClick"
+id="tab-control2"
+/>
 
 
+
+<my-goods goods="{{goods[currentType].list}}"/>
+
+<back-top wx:if="{{showBacktop}}"/>

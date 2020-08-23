@@ -1,4 +1,4 @@
-// pages/about/about.js
+// pages/cart/cart.js
 Page({
 
   /**
@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
+
   },
 
   /**
@@ -40,17 +40,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    //可以点击返回传参
-    console.log('页面退出');
 
-    const pages= getCurrentPages()
-    const home = pages[pages.length-2] //上一级的目录
-    console.log(home);
-    
-    home.setData({
-      title:'卡塔'
-    })
-    
   },
 
   /**

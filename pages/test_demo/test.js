@@ -1,4 +1,6 @@
 // pages/test/test.js
+
+import request from '../../service/network'
 Page({
 
   /**
@@ -83,7 +85,29 @@ Page({
           movies:data
         })
       }
-    })
+    });
+
+
+    /**
+     * 封装的网络请求
+     * 
+     */
+
+    request({
+      url: 'http://httpbin.org/post',
+      method:'post',
+      data:{
+        name:'tom',
+        age:20
+      }
+     })
+     .then(res=>{
+       console.log(res);
+     })
+     .catch(err=>{
+       console.log(err);
+     })
+    
 
   },
 
@@ -148,6 +172,11 @@ Page({
     const tabcontrol = this.selectComponent('#control')
     tabcontrol.setData({
       counter: tabcontrol.data.counter + 20
+    })
+  },
+  changRoute(){
+    wx.navigateTo({
+      url: '/pages/about/about',
     })
   }
 })
